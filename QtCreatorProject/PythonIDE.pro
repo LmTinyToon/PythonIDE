@@ -20,11 +20,16 @@ OUT_PWD = $${PWD}/../Temp
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
 DEFINES += QT_DEPRECATED_WARNINGS
+
+#       Additional include path for compiler to find headers
+INCLUDEPATH += $${INCLUDEDIR}
 
 #       Declaration of used source files
 SOURCES += $${SOURCEDIR}/Main.cpp\
            $${SOURCEDIR}/IDEWindow.cpp
+
 #       Declaration of used header files
 HEADERS  += $${INCLUDEDIR}/IDEWindow.h
 
