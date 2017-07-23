@@ -46,6 +46,15 @@ private:
     */
     void initialize_menus(void);
 
+    /*!
+        \fn void test_library_metod(void)
+        NOTE:(Alex) remove this method
+        It is test method to check, whether python library is worked
+        Params: none
+        Return: none
+    */
+    void test_library_metod(void);
+
 //  Python file text edit
     QTextEdit* m_py_edit;
 };

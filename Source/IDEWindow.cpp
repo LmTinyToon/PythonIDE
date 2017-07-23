@@ -4,6 +4,7 @@
 //  Includes
 //  Qt includes
 #include <QVBoxLayout>
+#include <QtGlobal>
 
 //  Local includes
 #include "PythonIDE/IDEWindow.h"
@@ -43,9 +44,20 @@ void IDEWindow::initialize_menus(void)
         menu_bar->addMenu("Edit");
     }
     {
-        //  Creation run menu
-        menu_bar->addMenu("Run");
+        //  Creation debug menu
+        QMenu* debug_menu = new QMenu("Debug");
+        {
+            QAction* run_action = new QAction("Run");
+            debug_menu->addAction(run_action);
+            connect(run_action, &QAction::triggered, this, &IDEWindow::test_library_metod);
+        }
+        menu_bar->addMenu(debug_menu);
     }
+}
+
+void IDEWindow::test_library_metod(void)
+{
+    qWarning("TEST LIBRARY METHOD!");
 }
 
 }
