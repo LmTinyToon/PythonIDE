@@ -8,6 +8,8 @@
 //  Includes
 //  Qt includes
 #include <QMainWindow>
+#include <QMenuBar>
+#include <QTextEdit>
 
 //  PythonIDE namespace
 namespace PythonIDE
@@ -28,11 +30,24 @@ public:
         IDEWindow default constructor
     */
     IDEWindow(void);
+
     /*!
         \fn ~IDEWindow(void)
         IDEWindow destructor
     */
     ~IDEWindow(void);
+private:
+//  Private methods
+    /*!
+        \fn void initialize_menus(void)
+        Performs initialization of menus of IDE
+        Params: none
+        Return: created menu bar
+    */
+    void initialize_menus(void);
+
+//  Python file text edit
+    QTextEdit* m_py_edit;
 };
 
 //  PythonIDE namespace end
