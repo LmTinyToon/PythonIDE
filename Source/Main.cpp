@@ -5,7 +5,7 @@
 //  Qt includes
 #include <QApplication>
 //  Local includes
-#include "IDEWindow.h"
+#include "PythonIDE/IDEWindow.h"
 
 /*!
     \fn int main(int argc, char* argv[])

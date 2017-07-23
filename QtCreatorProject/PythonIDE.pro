@@ -3,7 +3,10 @@
 #       Source code directory
 SOURCEDIR = $${PWD}/../Source
 #       Include headers directory
-INCLUDEDIR = $${PWD}/../Include
+#       Base path for includes
+BASE_INCLUDE_DIR = $${PWD}/../Include
+#       Path to ide includings
+IDE_INCLUDE_DIR = $${BASE_INCLUDE_DIR}/PythonIDE
 
 #   Qt options
 #       Project type
@@ -23,10 +26,10 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 #       Adding flag to emit warnings in the case of usage deprecated api
 DEFINES += QT_DEPRECATED_WARNINGS
 #       Additional include path for compiler to find headers
-INCLUDEPATH += $${INCLUDEDIR}
+INCLUDEPATH += $${BASE_INCLUDE_DIR}
 #       Declaration of used source files
 SOURCES += $${SOURCEDIR}/Main.cpp\
            $${SOURCEDIR}/IDEWindow.cpp
 #       Declaration of used header files
-HEADERS  += $${INCLUDEDIR}/IDEWindow.h
+HEADERS  += $${IDE_INCLUDE_DIR}/IDEWindow.h
 

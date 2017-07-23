@@ -6,7 +6,7 @@
 #include <QVBoxLayout>
 
 //  Local includes
-#include "IDEWindow.h"
+#include "PythonIDE/IDEWindow.h"
 
 //  PythonIDE namespace
 namespace PythonIDE
