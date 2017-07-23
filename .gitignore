@@ -1,3 +1,5 @@
 /Bin
 /Temp
+/Libs
+/Include/Python
 *.pro.user
