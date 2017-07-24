@@ -2,11 +2,14 @@
     PythonIDE/IDEWindow.cpp file, IDEWindow class implementation
 */
 //  Includes
+//  Python includes
+#include "Python/Python.h"
+
 //  Qt includes
 #include <QVBoxLayout>
 #include <QtGlobal>
 
-//  Local includes
+//  PythonIDE includes
 #include "PythonIDE/IDEWindow.h"
 
 //  PythonIDE namespace
@@ -58,6 +61,12 @@ void IDEWindow::initialize_menus(void)
 void IDEWindow::test_library_metod(void)
 {
     qWarning("TEST LIBRARY METHOD!");
+    //  Python initialization
+    Py_Initialize();
+    PyRun_SimpleString("from time import time,ctime\n"
+                       "print('Today is', ctime(time()))\n");
+    //  Finalization of python
+    Py_Finalize();
 }
 
 }
